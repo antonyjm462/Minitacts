@@ -1,0 +1,100 @@
+<div style="text-align:center">
+    <h1 class="lead header">
+        {{title}}
+    </h1>
+</div>
+<div class=row>
+    <div class="col-4">
+
+    </div>
+    <div class="col-5">
+        <div class="search">
+            <form class="example-form" [formGroup]="search" (ngSubmit)="onSearch()">
+                
+                <mat-form-field class="example-full-width">
+                        <button mat-mini-fab color="primary" matSuffix type="submit"><i class="fas fa-search"></i></button>
+                    <input matInput placeholder="Search" formControlName="item">
+                    
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+    <div class="col-3">
+        <button mat-fab color="warn" (click)="openDialog()"> <i class="fas fa-plus"></i> </button>
+    </div>
+</div>
+<div class="item" *ngFor="let index of user">
+    <span matBadge="{{index.count}}" matBadgeOverlap="false">
+        <mat-card class="card">
+            <mat-card-header>
+                <div mat-card-avatar class="header-image"></div>
+                <mat-card-title>{{index.name}} </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <br>
+                <p class="lead">
+                    Name: {{index.name}}
+                </p>
+                <p class="lead">
+                    Number: {{ index.number }}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-stroked-button color="warn" (click)="onDel(index.count)">Delete</button>
+            </mat-card-actions>
+        </mat-card>
+    </span>
+</div>
+
+<div class="footer">
+    <p class="lead" style="text-align: center">
+        <i class="fa fa-copyright" aria-hidden="true"></i>&nbsp;Contacts.ink
+    </p>
+</div>
+
+<ng-template #modalTemplate let-data>
+    <div class="container-modal contact-modal input">
+        <h2 class="lead" style="text-align: center">Add New Contact</h2>
+        <div class="row">
+            <div class="col-xs-1-6">
+                <i class="fas fa-id-card icon"></i>
+            </div>
+            <div class="col-xs-1-6">
+                <form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Name" formControlName="name">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Number" formControlName="number">
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" class="button" (click)="dialogRef.close();"
+                        type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+        <button mat-fab color="warn" (click)="dialogRef.close();">
+            Cancel</button>
+    </div>
+</ng-template>
+
+<ng-template #returnTemplate let-data>
+        <mat-card class="card">
+                <mat-card-header>
+                    <div mat-card-avatar class="header-image"></div>
+                    <mat-card-title>{{Name}} </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <br>
+                    <p class="lead">
+                        Name: {{Name}}
+                    </p>
+                    <p class="lead">
+                        Number: {{Number}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <button mat-fab color="warn" (click)="dialogRef.close();">
+            Cancel</button>
+</ng-template>
