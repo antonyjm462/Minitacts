@@ -1,0 +1,37 @@
+<div class="topnav container-fluid">
+  <h1 class="lead navheader">CONTACTS</h1>
+</div>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <p class="lead"> Login in </p>
+    </div>
+    <form (submit)="onLogin()">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="userEmail"
+        [ngModelOptions]="{standalone: true}" required autofocus>
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password"
+        [ngModelOptions]="{standalone: true}" required>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+      <input type="submit" class="google fadeIn fourth" value="Google" (click)="googlelogin()">
+    </form>
+    <div id="formFooter">
+        <a class="underlineHover" (click)="register()" class="sign">No Accout, Sign Up ?</a><br>
+        <a class="underlineHover" (click)="openDialog()"> Forgot Password ?</a>
+      </div>
+    </div>
+</div>
+
+
+<ng-template #modalTemplate let-data>
+  <p class="lead">Password Recovery</p>
+  <form class="form" (ngSubmit)="ForgotPassword()">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="E-mail" [(ngModel)]="userResetEmail" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="dialogRef.close();" type="submit"> Send
+    </button>
+  </form>
+  <br>
+  <div class="popup">Reset Your Password With link Sent</div>
+
+</ng-template>

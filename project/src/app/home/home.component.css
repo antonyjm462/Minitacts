@@ -1,7 +1,3 @@
-.header{
-    padding: 3rem;
-    font-size: 3rem;
-}
 .form {
   min-width: 150px;
   max-width: 500px;
@@ -11,47 +7,227 @@
 .example-full-width {
   width: 100%;
 }
-.icon{
-    font-size: 6rem;
-    padding: 2rem;
-    padding-right: 4rem;
+
+.icon {
+  font-size: 6rem;
+  padding: 2rem;
+  padding-right: 4rem;
 }
-.input{
-    padding: 1rem;
-    background-color: azure;
-    height: 20rem;
-    width: 50rem;
-    justify-content: center;
+
+.input {
+  padding: 1rem;
+  background-color: azure;
+  height: 20rem;
+  width: 50rem;
+  justify-content: center;
 }
-.button{
-    margin-left: 20rem;
+
+.button {
+  margin-left: 20rem;
 }
-.people{
+
+.people {
   padding: 1rem;
 }
-.footer{
+
+.footer {
   margin-top: 10rem;
   background-color: black;
   padding: 0px;
   align-items: center;
-  bottom: 0%;
+  position: relative;
+  bottom: 0;
   width: 100%;
   margin-top: 100%;
   height: 50px;
   color: white;
 }
-.icon-small{
+
+.icon-small {
   font-size: 1rem;
 }
-.item{
-  margin-top: 2rem;
-  max-width: 500px;
-  margin-left: 10rem;
+
+.bg {
+  margin-bottom: 4rem;
 }
+
+.item {
+  margin-bottom: 1rem;
+  max-width: 1000px;
+  border-radius: 25px;
+  -webkit-box-shadow: 21px 35px 35px -2px rgba(128, 128, 128, 0.32);
+  -moz-box-shadow: 21px 35px 35px -2px rgba(128, 128, 128, 0.32);
+  box-shadow: 21px 35px 35px -2px rgba(128, 128, 128, 0.32);
+}
+
+.card {
+  background-color: white;
+  width: 1068px;
+  border-radius: 38px;
+}
+
 .header-image {
   background-image: url('../../assets/user.png');
   background-size: cover;
 }
+
 .example-form {
   width: 400px;
+}
+
+.icon-med {
+  font-size: 1.5rem;
+}
+
+.navheader {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  color: #f9f9f9;
+  padding-top: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.topnav {
+  /* background: url("../../assets/b3.jpg"); */
+  background-color: #0c0c0c;
+  background-size: cover;
+  opacity: 0.8;
+  height: 300px;
+  display: block;
+  overflow: hidden;
+}
+
+.search-container {}
+
+/* Style the links inside the navigation bar */
+
+.fa-search {
+  font-size: 20px;
+  color: #e0e0e0;
+  position: relative;
+  right: -15px;
+}
+
+.topnav a {
+  float: left;
+  text-decoration: none;
+}
+
+.menuicon {
+  font-size: 3rem;
+  padding: 2rem;
+  color: white;
+}
+
+.brand {
+  padding-left: 1rem;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.card-container {
+  /* margin-left: 8rem; */
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 700px;
+  position: relative;
+  margin: 0 auto;
+  top: -70px;
+  box-shadow: 2px 3px 14px -3px #d8d8d8;
+  padding: 30px;
+}
+
+.user-box {
+  padding: 15px;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  border-radius: 40%;
+  height: auto;
+  overflow: hidden;
+  width: 15em;
+}
+
+.avatar__image {
+  border: 0.2em solid #00BCD4;
+  border-radius: 50%;
+  height: auto;
+  padding: 0.7em;
+  -webkit-transform: translateX(-0.9em);
+  transform: translateX(-0.9em);
+  width: 100%;
+}
+
+.number {
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.name {
+  color: #d2cbcb;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.logout {
+  border-radius: 50px;
+  background-color: black;
+  block-size: 58px;
+  width: 167px;
+  font-size: 1.5rem;
+  top: -254px;
+  left: 1145px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .logout {
+    left: 10px;
+    top: -87px;
+  }
+  .avatar {
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    margin-left: -32px;
+  }
+  .bg {
+    margin-top: 22px;
+  }
+  .number {
+    font-size: 18px;
+  }
+  .float {
+    box-sizing: content-box;
+    left: 298px;
+    bottom: 1px;
+  }
+  .card-container{
+    width: 100%;
+  }
+  .name{
+    font-size: 17px;
+  }
+  .b1{
+
+  }
+  .b2{
+    
+  }
 }

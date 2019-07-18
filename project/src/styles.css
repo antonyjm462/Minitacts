@@ -5,3 +5,35 @@ body{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.icon{
+    font-size: 1.5rem;
+    padding: 1% 1%;
+}
+.header{
+    font-size: 3rem;
+    margin-left: 20rem;
+    justify-content: center;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    display: flex; 
+    flex-direction: row;
+    background-color: #333;
+    overflow: hidden;
+    align-content: center;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+  }
+  .topnav a.menu {
+    background-color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  .brand{
+      padding-left: 1rem;
+  }

@@ -16,13 +16,30 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
+import { FilterPipe } from "./home/filter.pipe";
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {MatRippleModule} from '@angular/material/core';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoginComponent } from './admin/login/login.component';
+import { VerifyEmailComponent } from './admin/verify-email/verify-email.component';
+import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
+import { RegisterComponent } from './admin/register/register.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ItemComponent,
-    NewUserComponent
+    NewUserComponent,
+    FilterPipe,
+    LoginComponent,
+    VerifyEmailComponent,
+    ForgotPasswordComponent,
+    RegisterComponent,
   ],
   imports: [
   AppRoutingModule,
@@ -38,10 +55,16 @@ import {MatIconModule} from '@angular/material/icon';
   ReactiveFormsModule,
   MatCardModule,
   MatBadgeModule,
-  MatIconModule
+  MatIconModule,
+  AngularFireModule.initializeApp(environment.firebase),
+   AngularFirestoreModule,
+   AngularFireDatabaseModule,
+   MatRippleModule,
+   AngularFireAuthModule,
+   ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 
 export class AppModule { 
