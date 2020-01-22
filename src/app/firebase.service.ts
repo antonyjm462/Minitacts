@@ -13,7 +13,6 @@ export class FirebaseService {
   id: any;
   name: any;
   number: any;
-  //doc = { payload: { doc: { data: () => { this.id, this.name, this.number} }}};
   dataList: { name: any; number: any; }[];
 
   constructor(private firestore: AngularFirestore) {
