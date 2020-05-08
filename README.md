@@ -1,4 +1,5 @@
 <h1 align="center">
+  <br><img src="src/assets/icons/minitacts.png" alt="LIBMA" width="200">
   MINITACTS (PWA)
   <br>
 </h1>
