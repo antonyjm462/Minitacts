@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { UserService } from '../firebase.service';
+import { UserService } from './user.service';
 import { User } from './models/user';
 import { AuthService } from  '../auth.service';
 
