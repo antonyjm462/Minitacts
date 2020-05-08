@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserService } from '../firebase.service';
-import { User } from '../user';
+import { User } from './models/user';
 import { AuthService } from  '../auth.service';
 
 @Component({

@@ -25,6 +25,7 @@ import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.
 import { RegisterComponent } from './auth/register/register.component';
 import { FilterPipe } from "./home/filter.pipe";
 import { UserService } from './home/user.service';
+import { AuthService } from './auth/auth.service';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -32,6 +33,7 @@ import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ServiceWorkerModule } from '@angular/service-worker';
+
 
 
 const COMPONENTS = [
@@ -51,7 +53,8 @@ const PIPES = [
 ];
 
 const SERVICES = [
-  UserService
+  UserService,
+  AuthService
 ]
 
 const MODULES = [

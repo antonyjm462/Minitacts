@@ -1,24 +1,22 @@
-
 <div class="topnav container-fluid">
     <h1 class="lead navheader">{{title}}</h1>
 </div>
 <div *ngIf="authService.isLoggedIn" class="nav-item">
-        <button mat-raised-button color="primary" class="logout" (click)="authService.logout()">Logout</button>
+    <button mat-raised-button color="primary" class="logout" (click)="authService.logout()">Logout</button>
 </div>
 <div class="card-container">
     <div class="search-container">
         <form>
             <mat-form-field class="example-full-width">
                 <button mat-button color="primary" matSuffix type="submit"><i class="fas fa-search"></i></button>
-                <input [(ngModel)]="searchText" matInput placeholder="Search Text"
-                    [ngModelOptions]="{standalone: true}">
+                <input [(ngModel)]="searchText" matInput placeholder="Search Text" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
         </form>
     </div>
     <div *ngFor="let userData of userList| filter : searchText;let i=index;" class="user-box">
         <div class="row">
             <div class="col-4">
-                <img class=" avatar" src="../../assets/user.png" height="100" width="100">
+                <img class=" avatar" src="../../assets/icons/user.png" height="100" width="100">
             </div>
             <div class="col-5">
                 <h3 class="number">{{ userData.data.number }}</h3>
@@ -45,14 +43,12 @@
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Number" formControlName="number" required minlength="10">
         </mat-form-field>
-        <div *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)"
-            class="alert alert-danger">
+        <div *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)" class="alert alert-danger">
             <div *ngIf="userForm.controls['name'].errors.required">
                 Name is required.
             </div>
         </div>
-        <div *ngIf="userForm.controls['number'].invalid && (userForm.controls['number'].dirty || userForm.controls['number'].touched)"
-            class="alert alert-danger">
+        <div *ngIf="userForm.controls['number'].invalid && (userForm.controls['number'].dirty || userForm.controls['number'].touched)" class="alert alert-danger">
             <div *ngIf="userForm.controls['number'].errors.required">
                 Number is required.
             </div>
@@ -74,22 +70,19 @@
             <input matInput placeholder="Name" formControlName="name" [(ngModel)]="model.name">
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Number" formControlName="number" required minlength="10"
-                [(ngModel)]="model.number">
+            <input matInput placeholder="Number" formControlName="number" required minlength="10" [(ngModel)]="model.number">
         </mat-form-field>
         <!-- <button mat-fab color="primary" class="button" (click)="dialogRef.close();" type="submit"><i
                 class="far fa-check-circle icon-med"></i></button> -->
         <button mat-raised-button color="primary" (click)="dialogRef.close();" type="submit"> Submit
         </button>
         <button mat-raised-button color="warn" (click)="dialogRef.close();" style="margin-left: 2rem;"> Cancel </button>
-        <div *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)"
-            class="alert alert-danger">
+        <div *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)" class="alert alert-danger">
             <div *ngIf="userForm.controls['name'].errors.required">
                 Name is required.
             </div>
         </div>
-        <div *ngIf="userForm.controls['number'].invalid && (userForm.controls['number'].dirty || userForm.controls['number'].touched)"
-            class="alert alert-danger">
+        <div *ngIf="userForm.controls['number'].invalid && (userForm.controls['number'].dirty || userForm.controls['number'].touched)" class="alert alert-danger">
             <div *ngIf="userForm.controls['number'].errors.required">
                 Number is required.
             </div>
