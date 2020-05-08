@@ -1,5 +1,5 @@
 <h1 align="center">
-  <br><img src="src/assets/icons/minitacts.png" alt="LIBMA" width="200">
+  <br><p align="center"><img src="src/assets/icons/minitacts.png" alt="LIBMA" width="200"></p>
   MINITACTS (PWA)
   <br>
 </h1>
