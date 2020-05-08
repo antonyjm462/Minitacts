@@ -23,7 +23,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { VerifyEmailComponent } from './auth/verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { FilterPipe } from "./home/filter.pipe";
+import { FilterPipe } from './home/filter.pipe';
 import { UserService } from './home/user.service';
 import { AuthService } from './auth/auth.service';
 

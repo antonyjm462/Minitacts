@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserService } from './user.service';
 import { User } from './models/user';
-import { AuthService } from  '../auth/auth.service';
+import { AuthService } from  'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-home',
