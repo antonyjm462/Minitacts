@@ -8,7 +8,7 @@ import { AngularFireModule } from '@angular/fire';
 @Injectable({
   providedIn: 'root'
 })
-export class FirebaseService {
+export class UserService {
   user: any;
   id: any;
   name: any;

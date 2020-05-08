@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { FirebaseService } from '../firebase.service';
+import { UserService } from '../firebase.service';
 import { User } from '../user';
 import { AuthService } from  '../auth.service';
 
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   
 
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, 
-    private firestore: AngularFirestore, private firebaseService: FirebaseService,
+    private firestore: AngularFirestore, private userService: UserService,
     public  authService:  AuthService) { 
       this.getuserList();
     }
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   getuserList = () =>
-    this.firebaseService
+    this.userService
       .getUsers()
       .subscribe((res: any) => (this.userList = res));
 
@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit {
     var useritem = new User();
     useritem.name = this.userForm.get('name').value;
     useritem.number = this.userForm.get('number').value;
-    this.firebaseService.createUser(useritem);
+    this.userService.createUser(useritem);
     this.userForm.patchValue({
       name: ' ',
       number: ' '
@@ -91,13 +91,13 @@ export class HomeComponent implements OnInit {
   }
 
   onDel(val) {
-    this.firebaseService.deleteUser(val);
+    this.userService.deleteUser(val);
   }
   onUpdate() {
     this.value = this.data.data;
     if (this.userForm.get('name').value != "") { this.value.name = this.userForm.get('name').value; }
     if (this.userForm.get('number').value != "") { this.value.number = this.userForm.get('number').value; }
-    this.firebaseService.updateUser(this.data.id, this.value);
+    this.userService.updateUser(this.data.id, this.value);
   }
 
 }

@@ -1,6 +1,3 @@
-firebase: contacts-92dc3
-
-
 <h1 align="center">
   MINITACTS (PWA)
   <br>
